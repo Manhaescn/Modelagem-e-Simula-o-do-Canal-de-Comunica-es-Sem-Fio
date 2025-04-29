@@ -813,28 +813,22 @@ def plot_tempo_de_coerencia(desvio_doppler, potencia, M):
 
 
 
-# questao 1.c)
+
 plot_media_espalhamento_mult(fc)
 plot_desvio_espalhamento_mult(fc)
 
-# questao 2.e)
 print(f"fator rice achado: {fator_rice} \nfator de rice calculado a partir da expressao: ", potencia[0] / np.sum(potencia[1:] ) )
 
-# questao 2.f)
 plot_atraso_de_potencia(tau, potencia)
 
-# questao 2.g)
 print(f"o espalhamento de atraso achado foi: {sigma}")
 print(f"o espalhamento de atraso calculado pela definicao foi: {sigma_def}")
 
-# questao 3.c)
 plot_potencia_angular_azimutal(theta, potencia)
 plot_potencia_angular_elevacao(phi, potencia)
 
-# questao 3.d)
 plot_direcao_chegada(direcao_chegada)
 
-# questao 4.c)
 vrx = 5
 numero_coordenada = 1
 angulo_azimutal_v = np.pi / 4
@@ -846,7 +840,6 @@ vrx = 50
 desvio_doppler = get_desvio_doppler( vrx, fc, direcao_chegada, angulo_azimutal_v, angulo_elevacao_v )
 plot_desvio_doppler( vrx, desvio_doppler, potencia )
 
-#questao 5.c)
 vrx = 5
 desvio_doppler = get_desvio_doppler( vrx, fc, direcao_chegada, angulo_azimutal_v, angulo_elevacao_v )
 plot_sinal_recebido()
@@ -854,10 +847,8 @@ vrx = 50
 desvio_doppler = get_desvio_doppler( vrx, fc, direcao_chegada, angulo_azimutal_v, angulo_elevacao_v )
 plot_sinal_recebido()
 
-# questao 6.b)
 plot_banda_de_coerencia(tau, potencia, N)
 
-# questao 6.c)
 vrx = 5
 desvio_doppler = get_desvio_doppler( vrx, fc, direcao_chegada, angulo_azimutal_v, angulo_elevacao_v )
 plot_tempo_de_coerencia(desvio_doppler, potencia, N)
